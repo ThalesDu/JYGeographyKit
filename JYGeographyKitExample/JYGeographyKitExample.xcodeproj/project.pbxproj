@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4225386F1EFD22C400053605 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4225386E1EFD22C400053605 /* main.m */; };
+		422538721EFD22C400053605 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 422538711EFD22C400053605 /* AppDelegate.m */; };
+		422538751EFD22C400053605 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 422538741EFD22C400053605 /* ViewController.m */; };
+		422538781EFD22C400053605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422538761EFD22C400053605 /* Main.storyboard */; };
+		4225387A1EFD22C400053605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422538791EFD22C400053605 /* Assets.xcassets */; };
+		4225387D1EFD22C400053605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4225387B1EFD22C400053605 /* LaunchScreen.storyboard */; };
+		422538881EFD22C400053605 /* JYGeographyKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 422538871EFD22C400053605 /* JYGeographyKitExampleTests.m */; };
+		4225389B1EFE7AB800053605 /* JYGeoLocatedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4225389A1EFE7AB800053605 /* JYGeoLocatedManager.m */; };
+		4225389F1EFE7D9300053605 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4225389E1EFE7D9300053605 /* CoreLocation.framework */; };
+		422538AB1EFE864000053605 /* JYGeoLocatedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 422538AA1EFE864000053605 /* JYGeoLocatedRequest.m */; };
+		422538AE1EFFACD100053605 /* JYGeoLocatedReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 422538AD1EFFACD100053605 /* JYGeoLocatedReachability.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		422538841EFD22C400053605 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 422538621EFD22C400053605 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 422538691EFD22C400053605;
+			remoteInfo = JYGeographyKitExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4225386A1EFD22C400053605 /* JYGeographyKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYGeographyKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4225386E1EFD22C400053605 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		422538701EFD22C400053605 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		422538711EFD22C400053605 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		422538731EFD22C400053605 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		422538741EFD22C400053605 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		422538771EFD22C400053605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		422538791EFD22C400053605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4225387C1EFD22C400053605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4225387E1EFD22C400053605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		422538831EFD22C400053605 /* JYGeographyKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYGeographyKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		422538871EFD22C400053605 /* JYGeographyKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYGeographyKitExampleTests.m; sourceTree = "<group>"; };
+		422538891EFD22C400053605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		422538981EFE7AAB00053605 /* JYGeoLocatedDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYGeoLocatedDefine.h; sourceTree = "<group>"; };
+		422538991EFE7AB800053605 /* JYGeoLocatedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYGeoLocatedManager.h; sourceTree = "<group>"; };
+		4225389A1EFE7AB800053605 /* JYGeoLocatedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYGeoLocatedManager.m; sourceTree = "<group>"; };
+		4225389C1EFE7ACD00053605 /* JYGeoLocatedHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYGeoLocatedHeader.h; sourceTree = "<group>"; };
+		4225389E1EFE7D9300053605 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		422538A91EFE864000053605 /* JYGeoLocatedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYGeoLocatedRequest.h; sourceTree = "<group>"; };
+		422538AA1EFE864000053605 /* JYGeoLocatedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYGeoLocatedRequest.m; sourceTree = "<group>"; };
+		422538AC1EFFACD100053605 /* JYGeoLocatedReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYGeoLocatedReachability.h; sourceTree = "<group>"; };
+		422538AD1EFFACD100053605 /* JYGeoLocatedReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYGeoLocatedReachability.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		422538671EFD22C400053605 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4225389F1EFE7D9300053605 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		422538801EFD22C400053605 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		422538611EFD22C400053605 = {
+			isa = PBXGroup;
+			children = (
+				422538921EFE79C300053605 /* JYGeographyKit */,
+				4225386C1EFD22C400053605 /* JYGeographyKitExample */,
+				422538861EFD22C400053605 /* JYGeographyKitExampleTests */,
+				4225386B1EFD22C400053605 /* Products */,
+				4225389D1EFE7D9200053605 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4225386B1EFD22C400053605 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4225386A1EFD22C400053605 /* JYGeographyKitExample.app */,
+				422538831EFD22C400053605 /* JYGeographyKitExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4225386C1EFD22C400053605 /* JYGeographyKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				422538701EFD22C400053605 /* AppDelegate.h */,
+				422538711EFD22C400053605 /* AppDelegate.m */,
+				422538731EFD22C400053605 /* ViewController.h */,
+				422538741EFD22C400053605 /* ViewController.m */,
+				422538761EFD22C400053605 /* Main.storyboard */,
+				422538791EFD22C400053605 /* Assets.xcassets */,
+				4225387B1EFD22C400053605 /* LaunchScreen.storyboard */,
+				4225387E1EFD22C400053605 /* Info.plist */,
+				4225386D1EFD22C400053605 /* Supporting Files */,
+			);
+			path = JYGeographyKitExample;
+			sourceTree = "<group>";
+		};
+		4225386D1EFD22C400053605 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4225386E1EFD22C400053605 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		422538861EFD22C400053605 /* JYGeographyKitExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				422538871EFD22C400053605 /* JYGeographyKitExampleTests.m */,
+				422538891EFD22C400053605 /* Info.plist */,
+			);
+			path = JYGeographyKitExampleTests;
+			sourceTree = "<group>";
+		};
+		422538921EFE79C300053605 /* JYGeographyKit */ = {
+			isa = PBXGroup;
+			children = (
+				422538B21F0105C200053605 /* Util */,
+				422538941EFE7A6C00053605 /* JYGeoLocated */,
+			);
+			path = JYGeographyKit;
+			sourceTree = "<group>";
+		};
+		422538941EFE7A6C00053605 /* JYGeoLocated */ = {
+			isa = PBXGroup;
+			children = (
+				4225389C1EFE7ACD00053605 /* JYGeoLocatedHeader.h */,
+				422538981EFE7AAB00053605 /* JYGeoLocatedDefine.h */,
+				422538991EFE7AB800053605 /* JYGeoLocatedManager.h */,
+				4225389A1EFE7AB800053605 /* JYGeoLocatedManager.m */,
+				422538A91EFE864000053605 /* JYGeoLocatedRequest.h */,
+				422538AA1EFE864000053605 /* JYGeoLocatedRequest.m */,
+				422538AC1EFFACD100053605 /* JYGeoLocatedReachability.h */,
+				422538AD1EFFACD100053605 /* JYGeoLocatedReachability.m */,
+			);
+			path = JYGeoLocated;
+			sourceTree = "<group>";
+		};
+		4225389D1EFE7D9200053605 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4225389E1EFE7D9300053605 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		422538B21F0105C200053605 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		422538691EFD22C400053605 /* JYGeographyKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4225388C1EFD22C400053605 /* Build configuration list for PBXNativeTarget "JYGeographyKitExample" */;
+			buildPhases = (
+				422538661EFD22C400053605 /* Sources */,
+				422538671EFD22C400053605 /* Frameworks */,
+				422538681EFD22C400053605 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JYGeographyKitExample;
+			productName = JYGeographyKitExample;
+			productReference = 4225386A1EFD22C400053605 /* JYGeographyKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		422538821EFD22C400053605 /* JYGeographyKitExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4225388F1EFD22C400053605 /* Build configuration list for PBXNativeTarget "JYGeographyKitExampleTests" */;
+			buildPhases = (
+				4225387F1EFD22C400053605 /* Sources */,
+				422538801EFD22C400053605 /* Frameworks */,
+				422538811EFD22C400053605 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				422538851EFD22C400053605 /* PBXTargetDependency */,
+			);
+			name = JYGeographyKitExampleTests;
+			productName = JYGeographyKitExampleTests;
+			productReference = 422538831EFD22C400053605 /* JYGeographyKitExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		422538621EFD22C400053605 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Jiny;
+				TargetAttributes = {
+					422538691EFD22C400053605 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					422538821EFD22C400053605 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 422538691EFD22C400053605;
+					};
+				};
+			};
+			buildConfigurationList = 422538651EFD22C400053605 /* Build configuration list for PBXProject "JYGeographyKitExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 422538611EFD22C400053605;
+			productRefGroup = 4225386B1EFD22C400053605 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				422538691EFD22C400053605 /* JYGeographyKitExample */,
+				422538821EFD22C400053605 /* JYGeographyKitExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		422538681EFD22C400053605 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4225387D1EFD22C400053605 /* LaunchScreen.storyboard in Resources */,
+				4225387A1EFD22C400053605 /* Assets.xcassets in Resources */,
+				422538781EFD22C400053605 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		422538811EFD22C400053605 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		422538661EFD22C400053605 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				422538751EFD22C400053605 /* ViewController.m in Sources */,
+				422538AB1EFE864000053605 /* JYGeoLocatedRequest.m in Sources */,
+				422538AE1EFFACD100053605 /* JYGeoLocatedReachability.m in Sources */,
+				4225389B1EFE7AB800053605 /* JYGeoLocatedManager.m in Sources */,
+				422538721EFD22C400053605 /* AppDelegate.m in Sources */,
+				4225386F1EFD22C400053605 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4225387F1EFD22C400053605 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				422538881EFD22C400053605 /* JYGeographyKitExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		422538851EFD22C400053605 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 422538691EFD22C400053605 /* JYGeographyKitExample */;
+			targetProxy = 422538841EFD22C400053605 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		422538761EFD22C400053605 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				422538771EFD22C400053605 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4225387B1EFD22C400053605 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4225387C1EFD22C400053605 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4225388A1EFD22C400053605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4225388B1EFD22C400053605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4225388D1EFD22C400053605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JYGeographyKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weibangong.geographykIt.JYGeographyKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4225388E1EFD22C400053605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JYGeographyKitExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weibangong.geographykIt.JYGeographyKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		422538901EFD22C400053605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JYGeographyKitExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weibangong.geographykIt.JYGeographyKitExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JYGeographyKitExample.app/JYGeographyKitExample";
+			};
+			name = Debug;
+		};
+		422538911EFD22C400053605 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JYGeographyKitExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weibangong.geographykIt.JYGeographyKitExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JYGeographyKitExample.app/JYGeographyKitExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		422538651EFD22C400053605 /* Build configuration list for PBXProject "JYGeographyKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4225388A1EFD22C400053605 /* Debug */,
+				4225388B1EFD22C400053605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4225388C1EFD22C400053605 /* Build configuration list for PBXNativeTarget "JYGeographyKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4225388D1EFD22C400053605 /* Debug */,
+				4225388E1EFD22C400053605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4225388F1EFD22C400053605 /* Build configuration list for PBXNativeTarget "JYGeographyKitExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				422538901EFD22C400053605 /* Debug */,
+				422538911EFD22C400053605 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 422538621EFD22C400053605 /* Project object */;
+}
