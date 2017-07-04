@@ -18,6 +18,7 @@
 		4225389F1EFE7D9300053605 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4225389E1EFE7D9300053605 /* CoreLocation.framework */; };
 		422538AB1EFE864000053605 /* JYGeoLocatedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 422538AA1EFE864000053605 /* JYGeoLocatedRequest.m */; };
 		422538AE1EFFACD100053605 /* JYGeoLocatedReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 422538AD1EFFACD100053605 /* JYGeoLocatedReachability.m */; };
+		42E90C561F0A353E00BF13FC /* JYGeoLocatedRequest+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E90C551F0A353E00BF13FC /* JYGeoLocatedRequest+Manager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		422538AA1EFE864000053605 /* JYGeoLocatedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYGeoLocatedRequest.m; sourceTree = "<group>"; };
 		422538AC1EFFACD100053605 /* JYGeoLocatedReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYGeoLocatedReachability.h; sourceTree = "<group>"; };
 		422538AD1EFFACD100053605 /* JYGeoLocatedReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYGeoLocatedReachability.m; sourceTree = "<group>"; };
+		42E90C541F0A353E00BF13FC /* JYGeoLocatedRequest+Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JYGeoLocatedRequest+Manager.h"; sourceTree = "<group>"; };
+		42E90C551F0A353E00BF13FC /* JYGeoLocatedRequest+Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JYGeoLocatedRequest+Manager.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				4225389A1EFE7AB800053605 /* JYGeoLocatedManager.m */,
 				422538A91EFE864000053605 /* JYGeoLocatedRequest.h */,
 				422538AA1EFE864000053605 /* JYGeoLocatedRequest.m */,
+				42E90C541F0A353E00BF13FC /* JYGeoLocatedRequest+Manager.h */,
+				42E90C551F0A353E00BF13FC /* JYGeoLocatedRequest+Manager.m */,
 				422538AC1EFFACD100053605 /* JYGeoLocatedReachability.h */,
 				422538AD1EFFACD100053605 /* JYGeoLocatedReachability.m */,
 			);
@@ -273,6 +278,7 @@
 				422538AE1EFFACD100053605 /* JYGeoLocatedReachability.m in Sources */,
 				4225389B1EFE7AB800053605 /* JYGeoLocatedManager.m in Sources */,
 				422538721EFD22C400053605 /* AppDelegate.m in Sources */,
+				42E90C561F0A353E00BF13FC /* JYGeoLocatedRequest+Manager.m in Sources */,
 				4225386F1EFD22C400053605 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

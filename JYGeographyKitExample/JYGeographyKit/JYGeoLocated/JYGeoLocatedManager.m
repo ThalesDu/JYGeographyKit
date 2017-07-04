@@ -9,6 +9,7 @@
 #import "JYGeoLocatedManager.h"
 #import "JYGeoLocatedReachability.h"
 #import "JYGeoLocatedRequest.h"
+#import "JYGeoLocatedRequest+Manager.h"
 
 
 dispatch_queue_t data_queue ()
@@ -48,11 +49,12 @@ dispatch_queue_t data_queue ()
     return instance;
 }
 
-- (instancetype)init
+- (instancetype) init
 {
     NSAssert(nil, @"Only one instance of JYGeoLocatedManager should be created. Use +[JYGeoLocatedManager sharedInstance] instead.");
     return nil;
 }
+
 - (instancetype) initInner
 {
     self = [super init];
@@ -83,7 +85,6 @@ dispatch_queue_t data_queue ()
     _isUpdatingLocation = NO;
     return self;
 }
-
 
 - (void) locatiedWithRequest:(JYGeoLocatedRequest *) request
 {
@@ -144,10 +145,10 @@ dispatch_queue_t data_queue ()
     }
 }
 
-
 - (void) removeLocationReuqest:(JYGeoLocatedRequest *) locationRequest
 {
     [self.m_requests removeObject:locationRequest];
+    locationRequest.completaionblock = nil;
     
     switch (locationRequest.requestType) {
         case JYGeoLocatedRequesTypeSignle:
@@ -251,7 +252,7 @@ dispatch_queue_t data_queue ()
     }
 }
 
--(BOOL) currentLocationAccuracySuitForRequest: (JYGeoLocatedRequest *) locationRequest
+- (BOOL) currentLocationAccuracySuitForRequest:(JYGeoLocatedRequest *) locationRequest
 {
     NSAssert(locationRequest, @"currentLocationAccuracySuitForRequest:Request can't be nil");
     CLLocation *mostRecentLocation = self.currentLocation;
@@ -267,7 +268,7 @@ dispatch_queue_t data_queue ()
 }
 
 #pragma mark - Location Manager Delegate
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
+- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
       // Received update successfully, so clear any previous errors
       self.isLastLocatedFailed = NO;
@@ -277,11 +278,9 @@ dispatch_queue_t data_queue ()
       
       // Process the location requests using the updated location
       [self processLocationRequests];
-
-
 }
 
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     JYGEOLog(@"Location services error: %@", [error localizedDescription]);
     self.isLastLocatedFailed = YES;
@@ -303,7 +302,7 @@ dispatch_queue_t data_queue ()
  Immediately completes all active location requests.
  Used in cases such as when the location services authorization status changes to Denied or Restricted.
  */
--(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+- (void) locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
         // Clear out any active location requests (which will execute the blocks with a status that reflects
@@ -326,8 +325,7 @@ dispatch_queue_t data_queue ()
 }
 
 #pragma mark - Priviate
-
--(void)completeAllLocationRequests
+- (void) completeAllLocationRequests
 {
     dispatch_sync(data_queue(), ^{
         NSArray *array = self.m_requests.copy;
@@ -387,7 +385,7 @@ dispatch_queue_t data_queue ()
 /**
  Inform CLLocationManager to start monitoring significant location changes.
  */
-- (void)startMonitoringSignificantLocationChangesIfNeeded
+- (void) startMonitoringSignificantLocationChangesIfNeeded
 {
     [self requestAuthorizationIfNeeded];
     __block NSArray *locationRequests;
@@ -408,7 +406,7 @@ dispatch_queue_t data_queue ()
 /**
  Inform CLLocationManager to start sending us updates to our location.
  */
-- (void)startUpdatingLocationIfNeeded
+- (void) startUpdatingLocationIfNeeded
 {
     [self requestAuthorizationIfNeeded];
     
@@ -428,7 +426,7 @@ dispatch_queue_t data_queue ()
     }
 }
 
-- (void)stopUpdatingLocationIfPossible
+- (void) stopUpdatingLocationIfPossible
 {
     __block NSArray *locationRequests;
     dispatch_async(data_queue(), ^{
@@ -484,7 +482,7 @@ dispatch_queue_t data_queue ()
 /**
  Requests permission to use location services on devices with iOS 8+.
  */
-- (void)requestAuthorizationIfNeeded
+- (void) requestAuthorizationIfNeeded
 {
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
     // As of iOS 8, apps must explicitly request location services permissions. INTULocationManager supports both levels, "Always" and "When In Use".

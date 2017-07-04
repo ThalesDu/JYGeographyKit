@@ -8,11 +8,11 @@
 
 #import "JYGeoLocatedRequest.h"
 #import "JYGeoLocatedManager.h"
-
-
+#import "JYGeoLocatedRequest+Manager.h"
 
 @interface JYGeoLocatedRequest ()
-@property (nonatomic, readwrite) BOOL hasTimeOut;
+@property (nonatomic, assign, readwrite) JYGeoLocatedRequesType requestType;//!< 定位的类型，1、单次定位 2、持续定位 3、显著位置变化的监听。
+@property (nonatomic, assign, readwrite) NSTimeInterval timeOut; //!<  单次定位才有超时时间默认是10s
 @property (nonatomic, assign) NSInteger requestId;
 @end
 
@@ -107,75 +107,7 @@
     }
 }
 
-- (void) startTimeOutIfNotStart
-{
-    if (self.startRequestTimeintervalFrom1970<1.0) {
-        self.startRequestTimeintervalFrom1970 = [[NSDate date] timeIntervalSince1970];
-    }
-}
-
-#pragma mark - Read Only Property
-- (BOOL)isRecurringRequest
-{
-    return self.requestType == JYGeoLocationRequestTypeSignificantChanges || self.requestType == JYGeoLocatedRequesTypeSubscription;
-}
-
-- (CLLocationAccuracy)horizontalAccuracyThreshold
-{
-    switch (self.desiredAccuracy) {
-        case JYGeoHorizontalAccuracyThresholdCity:
-            return kJYGeoHorizontalAccuracyThresholdCity;
-            break;
-        case JYGeoHorizontalAccuracyThresholdNeighborhood:
-            return kJYGeoHorizontalAccuracyThresholdNeighborhood;
-            break;
-        case JYGeoHorizontalAccuracyThresholdBlock:
-            return kJYGeoHorizontalAccuracyThresholdBlock;
-            break;
-        case JYGeoHorizontalAccuracyThresholdHouse:
-            return kJYGeoHorizontalAccuracyThresholdHouse;
-            break;
-        case JYGeoHorizontalAccuracyThresholdRoom:
-            return kJYGeoHorizontalAccuracyThresholdRoom;
-            break;
-        default:
-            NSAssert(NO, @"Unknown desired accuracy.");
-            return 0.0;
-            break;
-
-    }
-}
-
--(CLLocationAccuracy)updateTimeStaleThreshold
-{
-    switch (self.desiredAccuracy) {
-        case JYGeoHorizontalAccuracyThresholdCity:
-            return kJYGeoTimeintervalThresholdCity;
-            break;
-        case JYGeoHorizontalAccuracyThresholdNeighborhood:
-            return kJYGeoTimeintervalThresholdNeighborhood;
-            break;
-        case JYGeoHorizontalAccuracyThresholdBlock:
-            return kJYGeoTimeintervalThresholdBlock;
-            break;
-        case JYGeoHorizontalAccuracyThresholdHouse:
-            return kJYGeoTimeintervalThresholdHouse;
-            break;
-        case JYGeoHorizontalAccuracyThresholdRoom:
-            return kJYGeoTimeintervalThresholdRoom;
-            break;
-        default:
-            NSAssert(NO, @"Unknown desired accuracy.");
-            return 0.0;
-            break;
-    }
-}
 #pragma mark -
-- (void)dealloc
-{
-    self.completaionblock = nil;
-}
-
 -(NSString *)description
 {
     NSString *typeString;

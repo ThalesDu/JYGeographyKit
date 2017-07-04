@@ -14,7 +14,6 @@
 
 @interface JYGeoLocatedManager : NSObject
 + (instancetype) sharedInstance;
-
 - (void) locatiedWithRequest:(JYGeoLocatedRequest *) request;
 - (void) cancleLocationWithRequest:(JYGeoLocatedRequest *) request;
 @end

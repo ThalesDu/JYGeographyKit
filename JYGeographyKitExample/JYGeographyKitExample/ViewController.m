@@ -16,13 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    CLGeocoder *code = [[CLGeocoder alloc] init];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        JYGeoLocatedRequest * request = [[JYGeoLocatedRequest alloc] initWithType:JYGeoLocationRequestTypeSignificantChanges
+        JYGeoLocatedRequest * request = [[JYGeoLocatedRequest alloc] initWithType:JYGeoLocatedRequesTypeSubscription
                                                                   desiredAccuracy:JYGeoHorizontalAccuracyThresholdHouse
                                                                   timeOutInterval:60
                                                                        completion:^(CLLocation *location, JYGeoLocatedStatus status) {
-            NSLog(@"located At location :%@  state : %ld",location, (long)status);
+                                                                           [code reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+                                                                               if (placemarks.count>0) {
+                                                                                   CLPlacemark *first =placemarks.firstObject;
+                                                                                   NSString *string = first.description;
+                                                                                   
+                                                                                   NSLog(@"ReGepcodeRespond = %@", string);
+                                                                               }
+                                                                           }];
         }];
         
         [request resume];
